@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Greeting</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Style tambahan untuk animasi */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .button:hover {
+      background-color: #ff69b4; /* Warna berubah saat hover */
+      color: #fff;
+      transition: 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-1 fade-in">
+      <h2>Hi Zara, its ur special day</h2>
+      <h1>HAPPY BIRTHDAY! <span>♡</span></h1>
+    </div>
+    <div class="image-1 fade-in">
+      <img src="img/flower.jpg" alt="Flower">
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="container-content">
+    <h1>Hi Zara, </h1>
+    <div class="content">
+      <div class="image fade-in">
+        <img src="img/zahra-1.jpg" alt="Person Image">
+      </div>
+      <div class="text fade-in">
+        <p>
+          I’m so glad to have you in my life and to be able to call you my soulmate. you are the most beautiful person i have ever met, both inside and out. My life has become colorful after meeting you.
+        </p>
+        <p>
+          As we are together, I wanted to take a moment to let you know how much you mean to me. Every day with you is a gift. I can’t wait to celebrate your special day and many more to come. You’re my sunshine, my moon, and all the stars. I promise to keep you smiling and I promise I will be on your side until I die.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End Content -->
+
+  <!-- Card -->
+  <div class="container-card fade-in">
+    <div class="card">
+      <img src="img/about-zahra.jpg" alt="Zahra">
+      <h2>ABOUT ZAHRA</h2>
+      <a href="aboutzahra.html">
+        <button class="button">READ IT</button>
+      </a>
+    </div>
+    <div class="card">
+      <img src="img/gift.jpg" alt="Gift">
+      <h2>GIFT</h2>
+      <a href="gift.html">
+        <button class="button">CLAIM THEM</button>
+      </a>
+    </div>
+    <div class="card">
+      <img src="img/letter.png" alt="Letter">
+      <h2>LETTER</h2>
+      <a href="letter.html">
+        <button class="button">CLICK TO OPEN</button>
+      </a>
+    </div>
+  </div>
+  <!-- End Card -->
+
+  <!-- Content -->
+  <div class="container-content">
+    <h1>ONCE AGAIN </h1>
+    <div class="content">
+      <div class="text fade-in">
+        <p>
+          Happy Birthday my love, my best friend, my soulmate, my EX and my partner in crime. thank you for being an amazing girl, for loving me unconditionally, and for being the most incredible person that i have ever met. i wish you all the love, happiness, and success in the world. may all your dreams and wishes come true, and may this year be filled with new adventures and unforgettable moments. i look forward to sharing many more birthdays with you and making many more wonderful memories together.
+          may your day be filled with all the joy and love that you deserve. i love you more than words can express ♡. 
+        </p> 
+      </div>
+      <div class="content">
+        <div class="image fade-in">
+          <img src="img/zahra-2.jpg" alt="Person Image">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Content -->
+
+  <script>
+    // Menambahkan efek fade-in ketika halaman di-scroll
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+    function handleScroll() {
+      fadeInElements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          element.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Efek button klik
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Button clicked! Navigating...');
+      });
+    });
+
+    // Initial check for already visible elements
+    handleScroll();
+  </script>
+</body>
+</html>
